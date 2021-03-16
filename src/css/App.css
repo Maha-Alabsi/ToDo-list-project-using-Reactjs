@@ -1,0 +1,25 @@
+.header-comp{
+  background-color: rgb(95, 95, 95);
+  color: #fff;
+}
+
+.ToDoList {
+  border: solid black 1px ;
+  width: 300px;
+  margin: 14.3rem;
+  padding: 29px;
+}
+
+
+.check-item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: solid gray 1px;
+}
+
+.footer-comp{
+  background-color: rgb(95, 95, 95);
+  color: #fff;
+}
