@@ -6,14 +6,39 @@ import Footer from './Footer';
 import './../css/App.css';
 
 
-function App() {
-  //To make adding items more Dynamic
-  const toDoRender = todosData.map((item)=>{
+// function App() {
+//   //To make adding items more Dynamic
+//   const toDoRender = todosData.map((item)=>{
+//     return(
+//     <ToDoItem key={item.id} text={item.text} status={item.completed}/>
+//     );
+//   });
+//   return (
+//     <div>
+//       <Header />
+//     <div className="ToDoList">
+//          {toDoRender}
+//     </div>
+//     <Footer />
+//     </div>
+//   );
+// }
+
+//convert Function components into Class component
+class App extends React.Component{
+  constructor(){
+    super();
+    this.state = {
+       toDo: todosData
+    }
+  }
+  render(){
+     //To make adding items more Dynamic
+  const toDoRender = this.state.toDo.map((item)=>{
     return(
     <ToDoItem key={item.id} text={item.text} status={item.completed}/>
     );
   });
- 
   return (
     <div>
       <Header />
@@ -23,6 +48,7 @@ function App() {
     <Footer />
     </div>
   );
+  }
 }
 
 export default App;
