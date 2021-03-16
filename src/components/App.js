@@ -1,32 +1,24 @@
 import React from 'react';
 import Header from './Header';
+import todosData from './todoData';
 import ToDoItem from './ToDoItem';
 import Footer from './Footer';
 import './../css/App.css';
 
 
 function App() {
-  const child = "Merna";
-  const styleP={
-    color:'white',
-    backgroundColor:'red'
-  }
-  // const x="";
-  // if(x){
-  //    styleP.color="yellow"
-  // }else{
-  //    styleP.color="blue"
-  // }
-
-  // <p style={{backgroundColor:'blue'}}>Maha</p>
+  //To make adding items more Dynamic
+  const toDoRender = todosData.map((item)=>{
+    return(
+    <ToDoItem key={item.id} text={item.text} status={item.completed}/>
+    );
+  });
  
   return (
     <div>
       <Header />
     <div className="ToDoList">
-      <ToDoItem />
-      <ToDoItem />
-      <ToDoItem />
+         {toDoRender}
     </div>
     <Footer />
     </div>
