@@ -18,7 +18,7 @@ React Concepts that I've learned during this simple project:
 * How to convert between Functional Components & Class Components
 * Parent/Child Components
 * JSX to JavaScript and Back
-* Props & States 
+* Props & States
 * Changing State
 * Mapping Components
 * Handling Events in React
