@@ -14,17 +14,17 @@ class App extends React.Component {
   }
 
   handleChange(id) {
-    this.setState( prevState => {
-      const updateToDo = prevState.toDo.map( (todoItem) => {
+    this.setState((prevState) => {
+      const updateToDo = prevState.toDo.map((todoItem) => {
         if (todoItem.id === id) {
-           todoItem.completed=!todoItem.completed
+          todoItem.completed = !todoItem.completed;
         }
-        return todoItem
-      })
+        return todoItem;
+      });
       return {
-        toDo: updateToDo
-      }
-    })
+        toDo: updateToDo,
+      };
+    });
     console.log(id);
   }
   render() {
@@ -38,9 +38,7 @@ class App extends React.Component {
       <div>
         <Header />
         <main className="main-container">
-        <div className="ToDoList">
-          {toDoRender}
-        </div>
+          <div className="ToDoList">{toDoRender}</div>
         </main>
       </div>
     );
