@@ -15,7 +15,7 @@ class App extends React.Component {
 
   handleChange(id) {
     this.setState((prevState) => {
-      let updateToDo = prevState.toDo.map((item) => {
+      const updateToDo = prevState.toDo.map((item) => {
         let newItem = {...item};
         if (newItem.id === id) {
           newItem.completed = !newItem.completed
