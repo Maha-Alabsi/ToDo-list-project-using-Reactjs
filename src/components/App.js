@@ -2,7 +2,6 @@ import React from "react";
 import Header from "./Header";
 import todosData from "./todoData";
 import ToDoItem from "./ToDoItem";
-import Footer from "./Footer";
 import "./../css/App.css";
 
 class App extends React.Component {
@@ -15,17 +14,17 @@ class App extends React.Component {
   }
 
   handleChange(id) {
-    this.setState((prevState) => {
-      const updateToDo = prevState.toDo.map((item) => {
-        if (item.id === id) {
-          item.completed = !item.completed;
+    this.setState( prevState => {
+      const updateToDo = prevState.toDo.map( (todoItem) => {
+        if (todoItem.id === id) {
+           todoItem.completed=!todoItem.completed
         }
-        return item;
-      });
+        return todoItem
+      })
       return {
-        toDo: updateToDo,
-      };
-    });
+        toDo: updateToDo
+      }
+    })
     console.log(id);
   }
   render() {
@@ -38,8 +37,11 @@ class App extends React.Component {
     return (
       <div>
         <Header />
-        <div className="ToDoList">{toDoRender}</div>
-        <Footer />
+        <main className="main-container">
+        <div className="ToDoList">
+          {toDoRender}
+        </div>
+        </main>
       </div>
     );
   }

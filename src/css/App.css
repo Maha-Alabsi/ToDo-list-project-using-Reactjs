@@ -1,25 +1,38 @@
+body {
+  padding: 0;
+  background-color:rgba(0, 0,0, 0.1);
+  font-family: "Titillium Web", sans-serif;
+}
+
 .header-comp{
   background-color: rgb(95, 95, 95);
   color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 60px;
 }
 
+.main-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .ToDoList {
-  border: solid black 1px ;
+  border: solid rgb(82, 82, 82) 1px ;
   width: 300px;
-  margin: 14.3rem;
+  margin-top: 200px;
   padding: 29px;
+  box-shadow: 1px 5px 5px  rgb(100, 100, 100);
+  background-color: white;
+  min-height: 250px;
 }
 
-
-.check-item{
+.toDo-item{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   border-bottom: solid gray 1px;
-}
-
-.footer-comp{
-  background-color: rgb(95, 95, 95);
-  color: #fff;
 }

@@ -18,7 +18,7 @@ const todosData = [
     id: 4,
     text: "Reading",
     completed: true,
-  },
+  }
 ];
 
 export default todosData;
