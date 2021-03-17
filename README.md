@@ -8,7 +8,7 @@ This project is developed for practicing Reactjs
 ##### This React Project was created by using [Create React App]
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
 
-### Summery 
+### Summary 
 ***
 React Concepts that I've learned during this simple project:
 
